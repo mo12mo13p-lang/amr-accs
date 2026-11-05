@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بطاقة ديجيتال مودرن</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      /* خلفية ديجيتال ناعمة متدرجة للألوان */
+      background: radial-gradient(circle at 10% 20%, rgba(0, 86, 179, 0.15) 0%, transparent 40%),
+                  radial-gradient(circle at 90% 80%, rgba(37, 211, 102, 0.12) 0%, transparent 40%),
+                  #f4f7fb;
+    }
+
+    /* كارت بنمط Glassmorphism الحديث */
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 35px 25px;
+      border-radius: 32px;
+      box-shadow: 0 20px 40px rgba(0, 86, 179, 0.08), 
+                  0 2px 6px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      text-align: center;
+      max-width: 380px;
+      width: 100%;
+    }
+
+    .title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #0056b3, #0088ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 25px;
+      letter-spacing: -0.5px;
+    }
+
+    /* إطار الصورة دائري دائر بالكامل مع إضاءة خفيفة */
+    .avatar-wrapper {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 30px auto;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, #0056b3, #25d366);
+      box-shadow: 0 10px 25px rgba(0, 86, 179, 0.2);
+    }
+
+    .main-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      background-color: #fff;
+      display: block;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    /* أزرار كبسولية (Capsule) كيرفي عصرية */
+    .social-btn {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 10px;
+      border-radius: 24px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .social-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+    }
+
+    .social-btn img {
+      width: 26px;
+      height: 26px;
+      margin-bottom: 6px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+    }
+
+    /* ألوان الأزرار المتدرجة الحديثة */
+    .btn-tiktok {
+      background: linear-gradient(135deg, #242424, #000000);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-instagram {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      box-shadow: 0 8px 16px rgba(220, 39, 67, 0.25);
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      box-shadow: 0 8px 16px rgba(37, 211, 102, 0.25);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1 class="title">أهلاً بك</h1>
+
+    <!-- الصورة الشخصية في النص -->
+    <div class="avatar-wrapper">
+      <img src="amr.png" alt="الصورة الشخصية" class="main-image">
+    </div>
+
+    <div class="buttons-container">
+      <!-- زر تيك توك -->
+      <a href="http://tiktok.com/@its_3mr01" target="_blank" class="social-btn btn-tiktok">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+        <span>تيك توك</span>
+      </a>
+
+      <!-- زر انستجرام -->
+      <a href="https://www.instagram.com/amr_hany01" target="_blank" class="social-btn btn-instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        <span>انستجرام</span>
+      </a>
+
+      <!-- زر واتساب -->
+      <a href="https://wa.me/its3mr?s=t" target="_blank" class="social-btn btn-whatsapp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        <span>واتساب</span>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
